@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 import { robots } from './robots';
 import SearchBox from './SearchBox';
+import './App.css'
 
 
 
@@ -23,8 +24,8 @@ class App extends Component {
             return robots.name.toLocaleLowerCase().includes(this.state.searchfield.toLocaleLowerCase());
         } )
         return (
-            <div className="tc pa3 ba b--green bg-light-red">
-                    <h1>RoboFriends</h1>
+            <div className="tc">
+                    <h1 className="f1">RoboFriends</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
                    <CardList robots={filteredRobot} />
             </div>
@@ -33,5 +34,5 @@ class App extends Component {
     }
     
 }
-
+// pa3 ba b--green bg-light-red
 export default App;
